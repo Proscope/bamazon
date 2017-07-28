@@ -11,6 +11,7 @@ CREATE TABLE products(
 	stock_quantity INTEGER(50) NOT NULL,
 	PRIMARY KEY(id)
 );
+--Inserting items into products table--
 INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES ("Wilson Burn", "Racquets", 179.99, 5);
 
