@@ -5,9 +5,9 @@ USE bamazon;
 --Creating a new table called Products and giving it columns for the following--
 CREATE TABLE products(
 	id INTEGER(11) AUTO_INCREMENT NOT NULL,
-	product_name VARCHAR(100) NOT NULL,
-	department_name VARCHAR(100) NOT NULL,
-	price DECIMAL(4,2) NOT NULL,
+	product_name VARCHAR(50) NOT NULL,
+	department_name VARCHAR(50) NOT NULL,
+	price DECIMAL(8,2) NOT NULL,
 	stock_quantity INTEGER(50) NOT NULL,
 	PRIMARY KEY(id)
 );
@@ -42,3 +42,18 @@ VALUES ("Adidas Barricade", "Shoes", 149.99, 9);
 INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES ("Asics Speed", "Shoes", 99.99, 1);
 
+CREATE TABLE departments(
+	departmentId INTEGER(11) AUTO_INCREMENT NOT NULL,
+	department_name VARCHAR(50) NOT NULL,
+	overhead_costs DECIMAL(10, 2) NOT NULL,
+	total_sales DECIMAL(10, 2) NOT NULL,
+	PRIMARY KEY(departmentId)
+);
+INSERT INTO departments (department_name, overhead_costs, total_sales)
+VALUES ("Racquets", 2000.00, 0);
+
+INSERT INTO departments (department_name, overhead_costs, total_sales)
+VALUES ("Balls", 500.00, 0);
+
+INSERT INTO departments (department_name, overhead_costs, total_sales)
+VALUES ("Shoes", 1500.00, 0);
